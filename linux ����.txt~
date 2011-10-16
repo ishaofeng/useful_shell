@@ -1,0 +1,29 @@
+获得JAVA PID 并统计fd数据：
+
+gm.sh "/usr/alibaba/java/bin/jps |grep Main|awk '{print \"/usr/sbin/lsof -p \"\$1}'|sh|wc -l"
+
+curl统计网站响应时间：
+curl -o /dev/null -s -w %{time_connect}:%{time_starttransfer}:%{time_total} http://www.cnscn.org
+0.122 : 0.346 : 0.526
+
+
+查看所有机器的jboss crash日志文件
+
+gm.sh "ls -al ~/output/logs/logs_saved/hs*log"
+而不能用：
+gm.sh "ls -al /home/admin/output/logs/logs_saved/hs*log"
+
+
+gm.sh "grep match.p4p.alibaba.com ~/output/logs/sys/search.log | grep \"2010-03-19 06:17:\"| wc -l;grep \"19/Mar/2010:06:17:\" ~/output/logs/cookie_logs/5/cookie_log -c"
+
+
+一次性kill jboss
+ ps -aef | grep jboss | awk '{print "kill -9 " $2}' | sh
+
+
+cd /home/admin/searchweb_branch/velocitycache/search-deploy/target/web-deploy/bin
+
+cd /home/admin/searchweb_branch/velocitycache/search-deploy/output/logs
+
+/home/admin/searchweb_branch/velocitycache/search-deploy/target/web-deploy/conf/jmx/jmx_monitor_users.properties
+

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/ali_cn/!svn/ver/230382/search/searchapp/apptools/performace_app/PerformanceAnalysis/src
+END
+calculateAvgTime.py
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/ali_cn/!svn/ver/231035/search/searchapp/apptools/performace_app/PerformanceAnalysis/src/calculateAvgTime.py
+END
+pushCookieLog.py
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/ali_cn/!svn/ver/225239/search/searchapp/apptools/performace_app/PerformanceAnalysis/src/pushCookieLog.py
+END
+responsetime.py
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/ali_cn/!svn/ver/231154/search/searchapp/apptools/performace_app/PerformanceAnalysis/src/responsetime.py
+END
+sendEmailService.py
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/ali_cn/!svn/ver/231171/search/searchapp/apptools/performace_app/PerformanceAnalysis/src/sendEmailService.py
+END
+parse_cookie_log.py
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/ali_cn/!svn/ver/231090/search/searchapp/apptools/performace_app/PerformanceAnalysis/src/parse_cookie_log.py
+END
+parsedata.py
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/ali_cn/!svn/ver/230367/search/searchapp/apptools/performace_app/PerformanceAnalysis/src/parsedata.py
+END
+analyzeTask.py
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/ali_cn/!svn/ver/225239/search/searchapp/apptools/performace_app/PerformanceAnalysis/src/analyzeTask.py
+END

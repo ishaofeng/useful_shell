@@ -1,0 +1,134 @@
+#将@Override替换为//@Verride,即将其进行注释
+find -name "*.java" -exec sed -i 's,@Override,//@Override,g' {} + 
+find -name "*.java" -exec sed -i 's,research_url,//researchUrl,g' {} +
+#显示匹配的文件名称，行数
+find -name "*.vm" -exec grep -In "tracelog" {} + 
+find -name "*.vm" -exec grep -In "PageShowCount" {} + 
+find -name "*.vm" -exec grep -In "\$aliToolTrace" {} + 
+find -name "*.vm" -exec grep -Inc "\$catCount" {} + 
+find -name "*.vm" -exec sed -i 's,//researchUrl,researchUrl,g' {} +
+find -name "*.vm" -exec grep -Inc '\.setParameter("hotCatIds", \$!\{0,1\}hotCatIds)' {} \; 
+
+featuresResult
+find -name "*.bat" -exec sed -i 's#D:\work\intl-aisn\#D:\work\internref\intl-aisn\#g' {} +
+
+find -name "*.vm" -exec sed -i 's\$!stringEscapeUtil.escapeJavaScript\#SJS\g' {} +
+
+find -name "*.vm" -exec sed -i 's\'
+
+#aliclick中的：将'?searchtrace=$!testVar,或者'?searchtrace=$!{testVar} 替换为 '?searchtrace=#SJS($!testVar),
+#'?searchtrace=$!{test_Var} 替换为 '?searchtrace=#SJS($!test_Var),
+find -name "*.vm" -exec sed -i "s/'?searchtrace=\(\$!\{0,1\}{\{0,1\}[A-Za-z_]*}\{0,1\}\)/'?searchtrace=#SJS(\1)/g" {} +
+
+find -name "*.vm" -exec sed -i 's/html; charset=gb2312"/html; charset=GBK"/g' {} +
+
+find -name "*.xml" -exec sed -i 's/encoding="gb2312"/encoding="GBK"/g' {} +
+
+find -name "Head.vm" -exec grep -in '<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>'
+find -name "*.vm" -exec sed -i 's/escapeURL(\$!\{0,1\}\([a-zA-Z]*\),"GBK")/escapeURL(\$\1,"GB18030")/g' {} +
+
+find -name "*.vm" -exec sed -i "s/escapeURL(\$!\{0,1\}\([a-zA-Z]*\),'GBK')/escapeURL(\$\1,'GB18030')/g" {} +
+
+stringEscapeUtil.escapeURL($key,'GBK')
+
+#将doParrotTrace(this,'$!logValueString')替换为doParrotTrace(this,'#SJS($!logValueString)')
+find -name "*.vm" -exec sed -i  "s/doParrotTrace(this,'$!logValueString')/doParrotTrace(this,'#SJS($!logValueString)')/g" {} +
+
+find -name "*.vm" -exec sed -i  "s/doParrotTrace(this,'$!logValueString')/doParrotTrace(this,'#SJS($!logValueString)')/g" {} +
+
+#将doBatchParrotTrace(this,'$!logString')替换为doBatchParrotTrace(this,'#SJS($!logString)')
+find -name "*.vm" -exec sed -i  "s/doBatchParrotTrace(this,'$!logString')/doBatchParrotTrace(this,'#SJS($!logString)')/g" {} +
+
+<a href="$!message_url"
+
+find -name "*.vm" -exec sed -i 's/<a href="\(\$!\{0,1\}{\{0,1\}[A-Za-z_]*[Uu]rl}\{0,1\}\)"/<a href="#SLITERAL(\1)"/g' {} +
+
+#将url原样显示，替换a href="$!testUrl", a href="$testUrl", a href="$!test_url" a href="$test_Url" 替换为加上a href="#SLITERAL(对应的rul变量)"
+find -name "*.vm" -exec sed -i 's/a href="\(\$!\{0,1\}{\{0,1\}[A-Za-z_]*[Uu]rl}\{0,1\}\)"/a href="#SLITERAL(\1)"/g' {} +
+
+#将url原样显示，替换a href="$!testUrl/$!testURL", a href="$testUrl", a href="$!test_url" a href="$test_Url" 替换为加上a href="#SLITERAL(对应的rul变量)"
+find -name "*.vm" -exec sed -i 's/a href="\(\$!\{0,1\}{\{0,1\}[A-Za-z_]*[Uu][Rr][Ll]}\{0,1\}\)"/a href="#SLITERAL(\1)"/g' {} +
+
+find -name "*.vm" -exec sed -i 's/a href="\(\$!\{0,1\}{\{0,1\}[A-Za-z_]*[Uu][Rr][Ll]}\{0,1\}\)"/a href="#SLITERAL(\1)"/g' {} +
+
+<classpathentry kind="lib" path="
+
+find -name "*.vm" -exec sed -i 's/classpathentry kind="lib" path="\([A-Za-z_1-9.\-]*\)" /\1/g' {} +
+
+addQueryData("keywords","$!keywords")
+
+find -name "*.vm" -exec sed -i 's/addQueryData("keywords","$!keywords")/addQueryData("keywords",$!keywords)/g' {} +
+
+find -name "*.vm" -exec sed -i 's/href="\(\$!\{0,1\}{\{0,1\}[A-Za-z_]*[Uu]rl}\{0,1\}\)"/href="#SLITERAL(\1)"/g' {} +
+
+
+find -name "*.vm" -exec sed -i  "s/doParrotTrace(this,'$!logValueString')/doParrotTrace(this,'#SJS($!logValueString)')/g" {} +
+
+#递归搜索当前目录下包含有特定字符的文件，并将行号和行的内容进行输出,-r表示递归，n表示打印行号
+grep -rn "'?searchtrace=" ./
+
+grep -rn "doParrotTrace(" ./ 
+
+grep -rn "doBatchParrotTrace" ./ 
+
+find . -name "*.vm" | grep -H "href=\"#SLITERAL("
+-n 显示匹配行及行号,在显示出内容的每行前面会显示行数
+
+find -name "*.vm" -exec sed -i 's/searchtrace=\(\$![A-Za-z]\)/searchtrace=#SJS\1/g'
+
+find -name "*.vm" -exec sed -i "s/'searchtrace=\$![A-Za-z]*//g" {} +
+
+find -name "*.vm" -exec grep "endDate=2008" {} +
+hotCatIds
+#这个可以使用
+#sed -i, 表明修改本文件，而不是修改内存中的文件
+find -name "*.java" -exec sed -i 's,<[a-zA-Z, ]*>,,g' {} \;
+
+find -name "*.java" -exec sed -i 's,<[a-zA-Z]+>,,p' {} +
+
+find -name "*.java" -exec grep <[a-zA-Z]+>
+
+#匹配类似于List <MyClass>这样的字符
+egrep -n "<[a-zA-Z]+>" NawayPictureUtils.java
+
+#不能写成/<[a-zA-Z]+/,SED 中好像不支持+
+sed -e '/<*>/=' -n -e 's/<*>//g' NawayPictureUtils.java
+
+sed -n -e 's/<[a-zA-Z]*>//g' NawayPictureUtils.java
+
+-n -e 's/<[a-zA-Z]*>//g' NawayPictureUtils.java
+
+sed 's/<[a-zA-Z]>//g' NawayPictureUtils.java
+
+sed -n '45,50p' NawayPictureUtils.java
+
+sed 's/<[a-zA-Z, ]*>//g' NawayPictureUtils.java >test.java
+
+sed -e '/<[a-zA-Z, ]*>/=' -n -e '/<[a-zA-Z, ]*>/p' NawayPictureUtils.java
+
+
+sed 's#D:\\work\\intl-aisn\\#D:\\work\\internref\\intl-aisn\\#g' win-apachectl.bat>test.bat
+
+####bash编程
+#! /bin/bash
+filename=$1
+while read LINE
+do
+echo LINE
+done<$filename
+
+#####awk###
+/usr/alibaba/java/bin/jps | grep Main| awk '{print $1}'
+
+
+#!/bin/bash
+
+while [ true ]
+do
+logTime=`date`
+load=`w | grep "load" `
+echo "$logTime $load"
+sleep 10
+done
+
+find | xargs grep 'endDate="2009-07-'

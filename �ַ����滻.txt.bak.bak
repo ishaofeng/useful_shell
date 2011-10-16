@@ -1,0 +1,47 @@
+#将@Override替换为//@Verride,即将其进行注释
+find -name "*.java" -exec sed -i 's,@Override,//@Override,g' {} + 
+find -name "*.java" -exec sed -i 's,research_url,//researchUrl,g' {} +
+#显示匹配的文件名称，行数
+find -name "*.vm" -exec grep -In "tracelog" {} + 
+find -name "*.vm" -exec grep -In "PageShowCount" {} + 
+find -name "*.vm" -exec grep -In "\$aliToolTrace" {} + 
+find -name "*.vm" -exec grep -Inc "\$catCount" {} + 
+find -name "*.vm" -exec sed -i 's,//researchUrl,researchUrl,g' {} +
+
+featuresResult
+find -name "*.vm" -exec sed -i 's#\.setParameter("featuresResult", \$!\{0,1\}featuresResult)##g' {} +
+hotCatIds
+#这个可以使用
+#sed -i, 表明修改本文件，而不是修改内存中的文件
+find -name "*.java" -exec sed -i 's,<[a-zA-Z, ]*>,,g' {} \;
+
+find -name "*.java" -exec sed -i 's,<[a-zA-Z]+>,,p' {} +
+
+find -name "*.java" -exec grep <[a-zA-Z]+>
+
+#匹配类似于List <MyClass>这样的字符
+egrep -n "<[a-zA-Z]+>" NawayPictureUtils.java
+
+#不能写成/<[a-zA-Z]+/,SED 中好像不支持+
+sed -e '/<*>/=' -n -e 's/<*>//g' NawayPictureUtils.java
+
+sed -n -e 's/<[a-zA-Z]*>//g' NawayPictureUtils.java
+
+-n -e 's/<[a-zA-Z]*>//g' NawayPictureUtils.java
+
+sed 's/<[a-zA-Z]>//g' NawayPictureUtils.java
+
+sed -n '45,50p' NawayPictureUtils.java
+
+sed 's/<[a-zA-Z, ]*>//g' NawayPictureUtils.java >test.java
+
+sed -e '/<[a-zA-Z, ]*>/=' -n -e '/<[a-zA-Z, ]*>/p' NawayPictureUtils.java
+#替换.setParameter("showFid",$showFid) 或者.setParameter("showFid",$!showFid)或者.setParameter("showFid", $!showFid)
+find -name "*.vm" -exec sed -i 's#\.setParameter("showFid", \{0,1\}"\{0,1\}\$!\{0,1\}showFid"\{0,1\})##g' {} +
+####bash编程
+#! /bin/bash
+filename=$1
+while read LINE
+do
+echo LINE
+done<$filename

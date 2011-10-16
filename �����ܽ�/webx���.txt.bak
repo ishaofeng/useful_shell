@@ -1,0 +1,2 @@
+1.webx先执行screnn，把screen解析后，再去找对应的layout，然后将解析出来的screen内容填入到layout里对应的地方。
+DefaultVelocityService的mergeTemplate调用velocity引擎去渲染模板。

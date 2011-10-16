@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for((i=0; i<1000000; i++)) 
+do
+wget http://test.china.alibaba.com:7001/search/cosite_search.htm?keywords=mp3&cosite=google
+done

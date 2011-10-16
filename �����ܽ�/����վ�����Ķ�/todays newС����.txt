@@ -1,0 +1,6 @@
+首页上分管展示最新producat的逻辑为：
+promotionProduct.vm -> mostRecentLeads.vm(这个vm有对应的java control，在该java control获取最新的product数据，并进行缓存)
+
+修改点：1.将new产品线多取一次搜索的操作进行消除。
+        2.为了将withindays的参数能够展现在超链接中，修改了UrlConvertor类的getBuyTodaysNew方法，该方法被多条new产品线用到，现在由于
+	只对product进行了扩容，其他产品线呆以后扩容时，再修改调用的代码。

@@ -1,0 +1,19 @@
+##需要注意的
+find -name "*.vm" -exec sed -i "s/'?searchtrace=\(\$!\{0,1\}{\{0,1\}[A-Za-z_]*}\{0,1\}\)/'?searchtrace=#SJS(\1)/g" {} +
+
+后面的/g一定要加上，否则会认为s命令不完全
+
+
+#del the line whose content is:<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+
+find -name "Head.vm" -exec sed -i -e '/<meta http-equiv="Content-Type" content="text\/html; charset=GBK"\/>/d' {} + 
+
+find -name "Head.vm" -exec sed -e '/<title>\$\!{title}<\/title>/i\<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>'
+#the previous command can't run, so change the -exec to xargs
+find -name "Head.vm" | xargs sed -i -e '/<title>\$\!{title}<\/title>/i\<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+
+
+打印第一列：
+sed '{ print $1}' filename
+
+

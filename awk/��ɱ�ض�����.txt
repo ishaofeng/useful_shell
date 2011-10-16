@@ -1,0 +1,1 @@
+ps -aef | grep "httpd" | awk '{printf "kill -9 " $2 "\n"}' | sh

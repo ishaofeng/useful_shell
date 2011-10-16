@@ -1,0 +1,2 @@
+netstat -an|awk '{print $5}'|awk -F '.' '{print $1"."$2"."$3"."$4}'|sort|uniq -c|sort -r|head -10
+netstat -na | awk '{print $5}' | sed -n '/[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*\:.*/p' | cut -d':' -f1 | sort | uniq -c | sort -nr | head -10

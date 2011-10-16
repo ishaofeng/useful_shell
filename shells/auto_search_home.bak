@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+import os
+cp_antxprop_cmd='cp /home/hewei/antx/antx.properties ./'
+result = os.popen(cp_antxprop_cmd).readlines()
+#print "cp result:" + result[0]
+
+pwd = os.popen("echo $PWD").readlines()[0]
+pwd = pwd.replace('/','\\/')
+#remove /n
+pwd = pwd[:-1]
+
+sed_cmd='sed -i "s/^search\.home.*$/search\.home=' + pwd + '\/search-deploy\\n/g"'
+sed_cmd_antx_prop=sed_cmd + " antx.properties"
+
+os.popen(sed_cmd_antx_prop)
+
+#make hot deploy use antx.properties
+sed_cmd='sed -i "s/searchweb_dev\.properties/antx\.properties/g"'
+sed_cmd_pom_prop=sed_cmd + " ./bundle/war/pom.xml"
+
+os.popen(sed_cmd_pom_prop)

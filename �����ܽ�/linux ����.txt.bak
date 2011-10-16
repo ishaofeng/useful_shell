@@ -1,0 +1,3 @@
+获得JAVA PID 并统计fd数据
+
+gm.sh "/usr/alibaba/java/bin/jps |grep Main|awk '{print \"/usr/sbin/lsof -p \"\$1}'|sh|wc -l"

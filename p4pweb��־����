@@ -1,0 +1,1 @@
+grep -v "controller" p4pweb.log.09271654 | grep -v "apache" | grep -v "springframework" | grep -v "servlet" | grep -v "reflect" | grep -v "AbstractHandlerAdpater" | grep -v "roma" | grep -v "SearchEngineRemoteV2" | grep -v "Xml2DataParserImpl" | grep -v "NoQueryException" | grep -v "lang" | grep -v "RomaDispatcherServlet" > p4pweb.log.09271654.clean 

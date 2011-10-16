@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+import os
+
+cmd="jps | grep "Main" | awk '{print $1}'"
+pid = os.popen(cmd).readlines()[0]
+//remove the \n
+pid = pid[:-1]
+
+gc_cmd="jstat gcutil " + pid + " 10000 > gc.log &"
+
+os.system()

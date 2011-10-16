@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ $# == 0 ] 
+    then
+        echo "at least give one param"
+    else
+        echo "it's nice!!!"
+fi

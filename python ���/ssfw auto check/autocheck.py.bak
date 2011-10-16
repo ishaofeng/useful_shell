@@ -1,0 +1,11 @@
+from jpype import *
+import os
+
+jvmPath = "C:\\Java\\jdk1.6.0_18\\jre\\bin\\client\\jvm.dll"
+AESJARPath = "E:/workspace/AESTest/target/AESTest.jar"
+encryptKey = "searchForSSFWweb"
+#, "-ea", "-Djava.class.path="+AESJARPath)
+jpype.startJVM(r"C:\Java\jdk1.6.0_18\jre\bin\client\jvm.dll","-ea")
+#AESTest = jpype.JClass("com.hewei.test.AESTest")
+#print AESTest.encrypt("hell0",encryptKey)
+#jpype.shutdownJVM()

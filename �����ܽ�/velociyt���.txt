@@ -1,0 +1,24 @@
+1.如果param未被定义，则
+$testUtil.get($param)，接收到的参数值为null
+$testUtil.get($!param),接收到的参数值为null
+$testUtil.get("$!param"),接收到的参数值为""
+$testUtil.get("$param"),接收到的参数值为$param
+$testUtil.get('$param'),接收到的参数值为$param
+$testUtil.get('$!param'),接收到的参数值为$!param
+
+
+2。在开发中，如果碰到莫名其妙的javascript问题，而且这种问题只在IE上出现，而不在其他浏览器上出现，请情况IE的历史文件。
+
+3. 宏不能与java函数做成链式表达式，比如：
+这样写会报错：$stringEscapeUtil.escapeURL(#SJS($paramB3))
+这样写正常：$stringEscapeUtil.escapeURL($paramB3)
+
+4.不能将宏用在赋值中
+#set($testVar=$SJS("LALA"))
+
+#set($viewRealURL = "'MP3")
+<a this.href='#SJS($viewRealURL)'>haha</a>
+<a this.href='$!stringEscapeUtil.escapeJavaScript($viewRealURL)'>HEHE</a>
+这两个显示的是不一样的，后一个被javascript编码后，还会进行html编码。
+
+TemplateContext应该只是Control对应的java类和其control模板文件，嵌套的模板文件不能看到父模板的context。

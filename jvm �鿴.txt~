@@ -1,0 +1,5 @@
+jstat -gcnew -h3 21891 250
+
+jstat -gcutil -h3 21891 250
+
+jmap -J-d64 -heap 17375 > jmap.log.08191348

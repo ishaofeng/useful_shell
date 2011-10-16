@@ -1,0 +1,2 @@
+sudo apt-get install sbcl clisp
+sudo apt-get install slime;

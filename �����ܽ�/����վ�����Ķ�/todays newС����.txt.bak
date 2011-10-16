@@ -1,0 +1,2 @@
+首页上分管展示最新producat的逻辑为：
+promotionProduct.vm -> mostRecentLeads.vm(这个vm有对应的java control，在该java control获取最新的product数据，并进行缓存)

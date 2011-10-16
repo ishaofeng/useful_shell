@@ -1,0 +1,101 @@
+#∆•≈‰city,ªÚ’ﬂ!city
+find -name "*.vm" -exec sed -i 's#\.setParameter("memberlevel", \$!\{0,1\}memberlevel)##g' {} +
+find -name "*.vm" -exec sed -i 's#\.setParameter("onlineStatus",\$!\{0,1\}onlineStatus)##g' {} +
+isOnlyAlipay
+find -name "*.vm" -exec sed -i 's#\.setParameter("isOnlyAlipay",\$!\{0,1\}isOnlyAlipay)##g' {} +
+isOnlyWithPrice
+find -name "*.vm" -exec sed -i 's#\.setParameter("isOnlyWithPrice",\$!\{0,1\}isOnlyWithPrice)##g' {} +
+priceStart
+find -name "*.vm" -exec sed -i 's#\.setParameter("priceStart",\$!\{0,1\}priceStart)##g' {} +
+priceEnd
+find -name "*.vm" -exec sed -i 's#\.setParameter("priceEnd",\$!\{0,1\}priceEnd)##g' {} +
+
+find -name "offer.xml" -exec sed -i 's#resultMapping class="[^"]*"#resultMapping#g' {} +
+quantityBegin
+find -name "*.vm" -exec sed -i 's#\.setParameter("quantityBegin",\$!\{0,1\}quantityBegin)##g' {} +
+isLessThanQuantityBegin
+find -name "*.vm" -exec sed -i 's#\.setParameter("isLessThanQuantityBegin",\$!\{0,1\}isLessThanQuantityBegin)##g' {} +
+searchResult
+find -name "*.vm" -exec sed -i 's#\.setParameter("searchResult", \$!\{0,1\}searchResult)##g' {} +
+type
+find -name "*.vm" -exec sed -i 's#\.setParameter("type", \$!\{0,1\}type)##g' {} +
+catField
+find -name "*.vm" -exec sed -i 's#\.setParameter("catField",\$!\{0,1\}catField)##g' {} +
+find -name "*.vm" -exec sed -i 's#\.setParameter("keywords",\$!\{0,1\}keywords)##g' {} +
+city
+find -name "*.vm" -exec sed -i 's#\.setParameter("city",\$!\{0,1\}city)##g' {} +
+pageNavigation
+find -name "*.vm" -exec sed -i 's#\.setParameter("pageNavigation",\$!\{0,1\}pageNavigation)##g' {} +
+wordInfo
+find -name "*.vm" -exec sed -i 's#\.setParameter("wordInfo",\$!\{0,1\}wordInfo)##g' {} +
+catIds
+find -name "*.vm" -exec sed -i 's#\.setParameter("catIds",\$!\{0,1\}catIds)##g' {} +
+echoKeys
+find -name "*.vm" -exec sed -i 's#\.setParameter("echoKeys",\$!\{0,1\}echoKeys)##g' {} +
+echoKey
+find -name "*.vm" -exec sed -i 's#\.setParameter("echoKey",\$!\{0,1\}echoKey)##g' {} +
+echoKeyCount
+find -name "*.vm" -exec sed -i 's#\.setParameter("echoKeyCount",\$!\{0,1\}echoKeyCount)##g' {} +
+showStyle
+find -name "*.vm" -exec sed -i 's#\.setParameter("showStyle",\$!\{0,1\}showStyle)##g' {} +
+beginPage
+find -name "*.vm" -exec sed -i 's#\.setParameter("beginPage",\$!\{0,1\}beginPage)##g' {} +
+urlShowStyle
+find -name "*.vm" -exec sed -i 's#\.setParameter("urlShowStyle","\{0,1\}\$!\{0,1\}urlShowStyle"\{0,1\})##g' {} +
+showFid
+find -name "*.vm" -exec sed -i 's#\.setParameter("showFid", \{0,1\}"\{0,1\}\$!\{0,1\}showFid"\{0,1\})##g' {} +
+tradeType
+find -name "*.vm" -exec sed -i 's#\.setParameter("tradeType", \{0,1\}"\{0,1\}\$!\{0,1\}tradeType"\{0,1\})##g' {} +
+catField
+find -name "*.vm" -exec sed -i 's#\.setParameter("catField", \{0,1\}"\{0,1\}\$!\{0,1\}catField"\{0,1\})##g' {} +
+offerCount
+find -name "*.vm" -exec sed -i 's#\.setParameter("offerCount", \{0,1\}"\{0,1\}\$!\{0,1\}offerCount"\{0,1\})##g' {} +
+postTime
+find -name "*.vm" -exec sed -i 's#\.setParameter("postTime", \{0,1\}"\{0,1\}\$!\{0,1\}postTime"\{0,1\})##g' {} +
+showNomoreTips
+find -name "*.vm" -exec sed -i 's#\.setParameter("showNomoreTips", \{0,1\}"\{0,1\}\$!\{0,1\}showNomoreTips"\{0,1\})##g' {} +
+offset
+find -name "*.vm" -exec sed -i 's#\.setParameter("offset", \{0,1\}"\{0,1\}\$!\{0,1\}offset"\{0,1\})##g' {} +
+pageSize
+find -name "*.vm" -exec sed -i 's#\.setParameter("pageSize", \{0,1\}"\{0,1\}\$!\{0,1\}pageSize"\{0,1\})##g' {} +
+goldAdBanners
+find -name "*.vm" -exec sed -i 's#\.setParameter("goldAdBanners", \{0,1\}"\{0,1\}\$!\{0,1\}goldAdBanners"\{0,1\})##g' {} +
+platinumAdBanners
+find -name "*.vm" -exec sed -i 's#\.setParameter("platinumAdBanners", \{0,1\}"\{0,1\}\$!\{0,1\}platinumAdBanners"\{0,1\})##g' {} +
+exhibitionAdBanners
+find -name "*.vm" -exec sed -i 's#\.setParameter("exhibitionAdBanners", \{0,1\}"\{0,1\}\$!\{0,1\}exhibitionAdBanners"\{0,1\})##g' {} +
+pageCount
+find -name "*.vm" -exec sed -i 's#\.setParameter("pageCount", \{0,1\}"\{0,1\}\$!\{0,1\}pageCount"\{0,1\})##g' {} +
+province
+find -name "*.vm" -exec sed -i 's#\.setParameter("province", \{0,1\}"\{0,1\}\$!\{0,1\}province"\{0,1\})##g' {} +
+viewCatIdsList
+find -name "*.vm" -exec sed -i 's#\.setParameter("viewCatIdsList", \{0,1\}"\{0,1\}\$!\{0,1\}viewCatIdsList"\{0,1\})##g' {} +
+featureValueMap
+find -name "*.vm" -exec sed -i 's#\.setParameter("featureValueMap", \{0,1\}"\{0,1\}\$!\{0,1\}featureValueMap"\{0,1\})##g' {} +
+featureCountMap
+find -name "*.vm" -exec sed -i 's#\.setParameter("featureCountMap", \{0,1\}"\{0,1\}\$!\{0,1\}featureCountMap"\{0,1\})##g' {} +
+relativeKeys
+find -name "*.vm" -exec sed -i 's#\.setParameter("relativeKeys", \{0,1\}"\{0,1\}\$!\{0,1\}relativeKeys"\{0,1\})##g' {} +
+offerIds
+find -name "*.vm" -exec sed -i 's#\.setParameter("offerIds", \{0,1\}"\{0,1\}\$!\{0,1\}offerIds"\{0,1\})##g' {} +
+hotCatModel
+find -name "*.vm" -exec sed -i 's#\.setParameter("hotCatModel", \{0,1\}"\{0,1\}\$!\{0,1\}hotCatModel"\{0,1\})##g' {} +
+bizType
+find -name "*.vm" -exec sed -i 's#\.setParameter("bizType", \{0,1\}"\{0,1\}\$!\{0,1\}bizType"\{0,1\})##g' {} +
+establishedYear
+find -name "*.vm" -exec sed -i 's#\.setParameter("establishedYear", \{0,1\}"\{0,1\}\$!\{0,1\}establishedYear"\{0,1\})##g' {} +
+categoryId
+find -name "*.vm" -exec sed -i 's#\.setParameter("categoryId", \{0,1\}"\{0,1\}\$!\{0,1\}categoryId"\{0,1\})##g' {} +
+keywords
+find -name "*.vm" -exec sed -i 's#\.setParameter("infoCount", \{0,1\}"\{0,1\}\$!\{0,1\}infoCount"\{0,1\})##g' {} +
+city
+find -name "*.vm" -exec sed -i 's#\.setParameter("city", \{0,1\}"\{0,1\}\$!\{0,1\}city"\{0,1\})##g' {} +
+type
+find -name ".classpath" -exec sed -i 's#\D:/software/dev/ant/repository/#D:/lib/repo/#g' {} +
+find -name ".classpath" -exec sed -i 's#\D:/software/dev/ant/repository.project/#D:/lib/repo.pro/#g' {} +
+
+
+find -name "*.vm" -exec sed -i 's#\.setParameter("infoCount", \{0,1\}"\{0,1\}\$infoCount"\{0,1\})##g' {} +
+
+
+

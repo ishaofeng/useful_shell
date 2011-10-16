@@ -1,0 +1,8 @@
+#!/usr/bin/python
+##for freedom
+import os
+command = 'netstat -antp | grep 7070 | wc -l'
+result = os.popen(command).readlines()
+if(result[0][:-1]=="0"):
+    #默认使用当前帐号登录远端服务器
+    os.popen("ssh -qTfnN -D 7070 pistone.dreamhost.com")
